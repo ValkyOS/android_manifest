@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--
+      ValkyOS / Motorola Edge 50 Pro (eqe)
+      Local manifest overlay for LineageOS 24.0 (Android 17).
+      DEVELOPMENT ONLY: several eqe device-support trees still use their
+      Android 16 ("sixteen") branches. Syncable does not mean build-ready.
+      Keep this file under .repo/local_manifests/ when using the upstream
+      LineageOS/android lineage-24.0 manifest.
+    -->
+    <remote name="valky-github" fetch="https://github.com/" />
+
+    <!-- Device integration: still on Android 16; A17 port is pending publication/validation. -->
+    <project path="device/motorola/eqe"
+             name="dvy-jp/android_device_motorola_eqe"
+             remote="valky-github" revision="refs/heads/sixteen" />
+    <project path="device/qcom/wfd"
+             name="dvy-jp/android_device_qcom_wfd"
+             remote="valky-github" revision="refs/heads/sixteen" />
+    <project path="hardware/motorola"
+             name="dvy-jp/android_hardware_motorola"
+             remote="valky-github" revision="refs/heads/sixteen" />
+
+    <!-- Android 17-specific vendor sources published by dvy-jp. -->
+    <project path="vendor/motorola/eqe"
+             name="dvy-jp/proprietary_vendor_motorola_eqe_a17"
+             remote="valky-github" revision="refs/heads/main" />
+    <project path="vendor/qcom/wfd"
+             name="dvy-jp/proprietary_vendor_qcom_wfd_a17"
+             remote="valky-github" revision="refs/heads/main" />
+
+    <!-- Android 17-specific kernel and external modules. -->
+    <project path="kernel/motorola/sm7550"
+             name="dvy-jp/android_kernel_motorola_sm7550_a17"
+             remote="valky-github" revision="refs/heads/main" />
+    <project path="kernel/motorola/sm7550-modules"
+             name="dvy-jp/android_kernel_motorola_sm7550-modules_a17"
+             remote="valky-github" revision="refs/heads/main" />
+
+    <!-- Kernel device trees: Android 16 branch until the A17 version is published. -->
+    <project path="kernel/motorola/sm7550-devicetrees"
+             name="dvy-jp/android_kernel_motorola_sm7550-devicetrees"
+             remote="valky-github" revision="refs/heads/sixteen" />
+</manifest>
