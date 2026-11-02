@@ -22,13 +22,13 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="f8748880242858fe1da97fa55a86a91db99953aa" />
+             revision="d4ab35a5da28a6569ecf595b7ef8cd35117f4a5a" />
 
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
              remote="dvy-jp"
-             revision="716c62ce8f6b5ad6c3218084365b72c0ffc49ca5" />
+             revision="77eb7858eaefb87c47b6c418d53231f5202ac70c" />
 
     <project path="device/qcom/wfd"
              name="android_device_qcom_wfd"
