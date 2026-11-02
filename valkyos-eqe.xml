@@ -15,6 +15,15 @@
     <remote name="dvy-jp"
             fetch="https://github.com/dvy-jp/" />
 
+    <remote name="valkyos"
+            fetch="https://github.com/ValkyOS/" />
+
+    <!-- ValkyOS identity, version properties and boot animation. -->
+    <project path="vendor/valkyos"
+             name="android_vendor_valkyos"
+             remote="valkyos"
+             revision="b3f80edb4a5ca7f552af18db834ecdce6bdc6c76" />
+
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
