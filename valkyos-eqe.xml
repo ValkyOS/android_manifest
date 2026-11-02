@@ -28,7 +28,7 @@
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
              remote="dvy-jp"
-             revision="23c226fc3172b10ac176f9e6d9095b27cc4368ed" />
+             revision="716c62ce8f6b5ad6c3218084365b72c0ffc49ca5" />
 
     <project path="device/qcom/wfd"
              name="android_device_qcom_wfd"
