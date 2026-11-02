@@ -22,7 +22,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="b3f80edb4a5ca7f552af18db834ecdce6bdc6c76" />
+             revision="f8748880242858fe1da97fa55a86a91db99953aa" />
 
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
