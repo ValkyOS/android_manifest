@@ -18,9 +18,6 @@
     <remote name="valkyos"
             fetch="https://github.com/ValkyOS/" />
 
-    <remote name="lineage-fixed"
-            fetch="https://github.com/LineageOS/" />
-
     <!-- ValkyOS identity, version properties and boot animation. -->
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
@@ -28,18 +25,11 @@
              revision="685e7800d5401bab11b1d38ed63e84393b42e202" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
-    <remove-project name="LineageOS/android_frameworks_av" />
-    <remove-project name="LineageOS/android_frameworks_native" />
+    <extend-project name="LineageOS/android_frameworks_av"
+                    revision="937eb9047ec2f88620f1f6a4d9e407f6c869d91a" />
 
-    <project path="frameworks/av"
-             name="android_frameworks_av"
-             remote="lineage-fixed"
-             revision="937eb9047ec2f88620f1f6a4d9e407f6c869d91a" />
-
-    <project path="frameworks/native"
-             name="android_frameworks_native"
-             remote="lineage-fixed"
-             revision="46018f54b42489de960c62c3db9de131abce43ea" />
+    <extend-project name="LineageOS/android_frameworks_native"
+                    revision="46018f54b42489de960c62c3db9de131abce43ea" />
 
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
