@@ -18,6 +18,9 @@
     <remote name="valkyos"
             fetch="https://github.com/ValkyOS/" />
 
+    <remote name="grapheneos"
+            fetch="https://github.com/GrapheneOS/" />
+
     <!-- ValkyOS identity, version properties and boot animation. -->
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
@@ -30,6 +33,17 @@
 
     <extend-project name="LineageOS/android_frameworks_native"
                     revision="46018f54b42489de960c62c3db9de131abce43ea" />
+
+    <!-- Sandboxed Google Play compatibility components. -->
+    <project path="packages/apps/GmsCompat"
+             name="platform_packages_apps_GmsCompat"
+             remote="grapheneos"
+             revision="9a1e188647e25d2363d63e3dc07ec71722d1b019" />
+
+    <project path="external/GmsCompatConfig"
+             name="platform_external_GmsCompatConfig"
+             remote="grapheneos"
+             revision="774bc68a3a6e949153cd70c457d273466a2e7106" />
 
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
