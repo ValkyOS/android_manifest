@@ -34,11 +34,80 @@
     <extend-project name="LineageOS/android_frameworks_native"
                     revision="46018f54b42489de960c62c3db9de131abce43ea" />
 
-    <!-- Sandboxed Google Play compatibility components. -->
+    <!--
+      Sandboxed Google Play (GmsCompat), ported from GrapheneOS.
+      These forks keep the upstream base plus the ValkyOS GmsCompat changes on
+      branch valkyos-17. Original work: GrapheneOS (https://grapheneos.org).
+    -->
+    <remove-project name="LineageOS/android_frameworks_base" />
+    <project path="frameworks/base"
+             name="android_frameworks_base"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs,sysui-studio"
+             upstream="valkyos-17"
+             revision="266f2db00fd2af5750eeb19b240ec15a1f76979e" />
+
+    <remove-project name="LineageOS/android_art" />
+    <project path="art"
+             name="android_art"
+             remote="valkyos"
+             groups="pdk"
+             upstream="valkyos-17"
+             revision="82127e3a3650ead193380d87fe344c665f59e5fd" />
+
+    <remove-project name="LineageOS/android_bionic" />
+    <project path="bionic"
+             name="android_bionic"
+             remote="valkyos"
+             groups="pdk"
+             upstream="valkyos-17"
+             revision="199366392b1091ac30c0d47089c30cbdb17c7637" />
+
+    <remove-project name="platform/libcore" />
+    <project path="libcore"
+             name="platform_libcore"
+             remote="valkyos"
+             groups="pdk,sysui-studio"
+             upstream="valkyos-17"
+             revision="31dd5822d104b3d0c31cd093998eff27c08e11b5" />
+
+    <remove-project name="LineageOS/android_packages_modules_Connectivity" />
+    <project path="packages/modules/Connectivity"
+             name="android_packages_modules_Connectivity"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs"
+             upstream="valkyos-17"
+             revision="aead95271bd6ccc36a138639040ae4724eed9c74" />
+
+    <remove-project name="platform/packages/modules/StatsD" />
+    <project path="packages/modules/StatsD"
+             name="platform_packages_modules_StatsD"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs"
+             upstream="valkyos-17"
+             revision="e7c3f1a680ee05e0d39ec1900a77705cdd1ea33d" />
+
+    <remove-project name="platform/packages/modules/AppSearch" />
+    <project path="packages/modules/AppSearch"
+             name="platform_packages_modules_AppSearch"
+             remote="valkyos"
+             groups="pdk"
+             upstream="valkyos-17"
+             revision="cafffec79491b8fb395609a6613f5b4379aef726" />
+
+    <remove-project name="platform/system/tools/aidl" />
+    <project path="system/tools/aidl"
+             name="platform_system_tools_aidl"
+             remote="valkyos"
+             groups="pdk"
+             upstream="valkyos-17"
+             revision="0f1d55c51fc80810f88770eea78ee308ddafaca5" />
+
     <project path="packages/apps/GmsCompat"
              name="platform_packages_apps_GmsCompat"
-             remote="grapheneos"
-             revision="9a1e188647e25d2363d63e3dc07ec71722d1b019" />
+             remote="valkyos"
+             upstream="valkyos-17"
+             revision="5e8e7f34c723a282d6814d374ad5ae19e8f74ced" />
 
     <project path="external/GmsCompatConfig"
              name="platform_external_GmsCompatConfig"
