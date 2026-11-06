@@ -16,7 +16,8 @@ Known limitations:
 
 - The bootloader must stay unlocked (Motorola does not support a custom root of trust), so verified boot reports **orange**.
 - **Play Integrity is not promised**; apps that require it may refuse to run.
-- Still missing from GmsCompat: `AppsFilterImpl`, `PackageInstallerSession` and three parts of the GmsCompat app (Play Integrity handling, Google Camera client overrides, Android Auto carrier config).
+- Sandboxed Google Play is protected like on GrapheneOS: Play services and Play Store are installed and updated through the GrapheneOS App Store (or `adb`), not by arbitrary installers.
+- Still missing from GmsCompat: Play Integrity handling in the GmsCompat app. Google Camera client overrides and Android Auto support are postponed.
 - Not yet ported: Contact Scopes, Storage Scopes, per-app sensor control, USB protection, auto-reboot.
 
 ## Build it yourself
