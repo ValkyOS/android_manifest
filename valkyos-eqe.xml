@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="726fd5073567bd32ce427fb0293ce086f012e99b" />
+             revision="38de2563e69fffeb856a417759a6d59085d1152a" />
 
     <remove-project name="LineageOS/android_art" />
     <project path="art"
