@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="8cc67c809405f4974455ebe786c1ebd2abd56034" />
+             revision="596ca10d5f27cfa1c57ed6cdc3bb7997455fc70c" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
@@ -113,6 +113,15 @@
              name="platform_external_GmsCompatConfig"
              remote="grapheneos"
              revision="774bc68a3a6e949153cd70c457d273466a2e7106" />
+
+    <!--
+      GrapheneOS App Store. Follows branch 17 on purpose so a clean sync always
+      gets the latest release; the app also updates itself on the device.
+    -->
+    <project path="external/AppStore"
+             name="platform_external_AppStore"
+             remote="grapheneos"
+             revision="refs/heads/17" />
 
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
