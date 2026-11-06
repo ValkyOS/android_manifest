@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="685e7800d5401bab11b1d38ed63e84393b42e202" />
+             revision="8cc67c809405f4974455ebe786c1ebd2abd56034" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="707d0eaa9567cc35779b43c973fc65639f256777" />
+             revision="726fd5073567bd32ce427fb0293ce086f012e99b" />
 
     <remove-project name="LineageOS/android_art" />
     <project path="art"
