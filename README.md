@@ -10,6 +10,7 @@ Built and tested on the device (`userdebug`, signed with the builder's own keys)
 
 - **Sandboxed Google Play (GmsCompat)**, ported from GrapheneOS: Play Store and Play services run as **regular, unprivileged apps**. Sign-in, app installs and updates, push notifications, Google sign-in inside apps (Dynamite modules) and location rerouted to the OS work. GmsCompat stays enabled across reboots.
 - **Camera**: Motorola camera HAL and Moto Camera work, including portrait (blur) photos.
+- **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.
 
 Known limitations:
 
