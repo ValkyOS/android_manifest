@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="47989eb4cd796a3fc47f1331e81964e5fb018b13" />
+             revision="f103fd6384917988b42966184482a5df1b363d83" />
 
     <!-- ValkyOS privacy features in Settings (automatic security reboot toggle). -->
     <remove-project name="LineageOS/android_packages_apps_Settings" />
