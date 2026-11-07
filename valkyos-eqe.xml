@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="f103fd6384917988b42966184482a5df1b363d83" />
+             revision="7a83dab9f78b8724b7861fc167d2cf8529e44d22" />
 
     <!-- ValkyOS privacy features in Settings (automatic security reboot toggle). -->
     <remove-project name="LineageOS/android_packages_apps_Settings" />
@@ -55,6 +55,23 @@
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
              revision="6955cc21c364b5a473b39218dbe60f42035479a6" />
+
+    <!-- Contact Scopes (GrapheneOS): scoped contacts provider and permission screen. -->
+    <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />
+    <project path="packages/providers/ContactsProvider"
+             name="android_packages_providers_ContactsProvider"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs"
+             upstream="valkyos-17"
+             revision="58ee2e6a0f330622d73d194fbb605643994ddcdd" />
+
+    <remove-project name="LineageOS/android_packages_modules_Permission" />
+    <project path="packages/modules/Permission"
+             name="android_packages_modules_Permission"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs"
+             upstream="valkyos-17"
+             revision="bab9c32d09b5d4b0a57ecd08081fd89f7d801862" />
 
     <remove-project name="LineageOS/android_art" />
     <project path="art"

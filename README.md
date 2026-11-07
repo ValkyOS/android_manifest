@@ -4,13 +4,14 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V19, November 2026)
+## Status (V24, November 2026)
 
 Built and tested on the device (`userdebug`, signed with the builder's own keys):
 
 - **Sandboxed Google Play (GmsCompat)**, ported from GrapheneOS: Play Store and Play services run as **regular, unprivileged apps**. Sign-in, app installs and updates, push notifications, Google sign-in inside apps (Dynamite modules) and location rerouted to the OS work. GmsCompat stays enabled across reboots.
 - **Camera**: Motorola camera HAL and Moto Camera work, including portrait (blur) photos.
 - **Automatic security reboot**: after eight continuous hours locked the device reboots, so data returns to its encrypted state. Toggle in Settings > Security & privacy > More security.
+- **Contact Scopes**, ported from GrapheneOS: instead of granting the Contacts permission, you can choose which contacts, groups, numbers or emails an app may see. Option in the app's Contacts permission screen.
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.
 
 Known limitations:
@@ -19,7 +20,7 @@ Known limitations:
 - **Play Integrity is not promised**; apps that require it may refuse to run.
 - Sandboxed Google Play is protected like on GrapheneOS: Play services and Play Store are installed and updated through the GrapheneOS App Store (or `adb`), not by arbitrary installers.
 - Still missing from GmsCompat: Play Integrity handling in the GmsCompat app. Google Camera client overrides and Android Auto support are postponed.
-- Not yet ported: Contact Scopes, Storage Scopes, per-app sensor control, USB protection, auto-reboot.
+- Not yet ported: Storage Scopes, per-app sensor control, USB protection.
 
 ## Build it yourself
 
