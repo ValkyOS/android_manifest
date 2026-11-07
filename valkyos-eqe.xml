@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="fe8dd98cd8f06b80c1984f24045a69e969ac9cd9" />
+             revision="ae40f9c1e2b1111e46a3f360156819695d816d4a" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="d9acbcab17d9369b4911004d1b9860fde55888e9" />
+             revision="3c22c12d093e88a1492a2420aee2f721d9b2ab15" />
 
     <!-- ValkyOS privacy features in Settings (automatic security reboot toggle). -->
     <remove-project name="LineageOS/android_packages_apps_Settings" />
@@ -54,7 +54,7 @@
              remote="valkyos"
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
-             revision="6955cc21c364b5a473b39218dbe60f42035479a6" />
+             revision="f36d98301c98a7da3fcaef89191e63e2f47fd1e3" />
 
     <!-- Contact Scopes (GrapheneOS): scoped contacts provider and permission screen (also Storage Scopes UI). -->
     <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />
@@ -63,7 +63,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs"
              upstream="valkyos-17"
-             revision="58ee2e6a0f330622d73d194fbb605643994ddcdd" />
+             revision="098825540bb05a8e4516d42c6fc86766368e57f2" />
 
     <remove-project name="LineageOS/android_packages_modules_Permission" />
     <project path="packages/modules/Permission"
@@ -71,7 +71,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs"
              upstream="valkyos-17"
-             revision="4b31015843b4ded40c3c8b68e92f15e8359cdf66" />
+             revision="ddbae8728439852f558c5951b425e31b2350ab98" />
 
     <!-- Storage Scopes (GrapheneOS): media and files filtering. -->
     <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
@@ -80,7 +80,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="1c9b2fc73f906f387f089ba8e562f6ac30972a75" />
+             revision="2105d5d4a18d6e639ce028eb48c80394c4aff199" />
 
     <remove-project name="LineageOS/android_art" />
     <project path="art"
@@ -157,6 +157,20 @@
              name="platform_external_AppStore"
              remote="grapheneos"
              revision="refs/heads/17" />
+
+    <!--
+      Vanadium (GrapheneOS browser and WebView), presigned prebuilts. Replaces
+      the LineageOS browser and WebView. Follows branch 17 so a clean sync
+      always gets the latest release; the App Store also updates it.
+    -->
+    <remote name="grapheneos-gitlab"
+            fetch="https://gitlab.com/grapheneos/" />
+
+    <project path="external/vanadium"
+             name="platform_external_vanadium"
+             remote="grapheneos-gitlab"
+             revision="refs/heads/17"
+             clone-depth="1" />
 
     <!-- Device integration validated with Android 17. -->
     <project path="device/motorola/eqe"
