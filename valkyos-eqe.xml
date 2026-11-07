@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="596ca10d5f27cfa1c57ed6cdc3bb7997455fc70c" />
+             revision="fe8dd98cd8f06b80c1984f24045a69e969ac9cd9" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="e0914fd0581e3aa3a3ed7acd1caf0ae425026a25" />
+             revision="d9acbcab17d9369b4911004d1b9860fde55888e9" />
 
     <!-- ValkyOS privacy features in Settings (automatic security reboot toggle). -->
     <remove-project name="LineageOS/android_packages_apps_Settings" />
@@ -71,7 +71,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs"
              upstream="valkyos-17"
-             revision="3f3e1ed743aad641bfa72591934a5441e13b0002" />
+             revision="4b31015843b4ded40c3c8b68e92f15e8359cdf66" />
 
     <!-- Storage Scopes (GrapheneOS): media and files filtering. -->
     <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
