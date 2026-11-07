@@ -4,9 +4,9 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V29, November 2026)
+## Status (V30, November 2026)
 
-Built and tested on the device (`userdebug`, signed with the builder's own keys):
+Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
 - **Sandboxed Google Play (GmsCompat)**, ported from GrapheneOS: Play Store and Play services run as **regular, unprivileged apps**. Sign-in, app installs and updates, push notifications, Google sign-in inside apps (Dynamite modules) and location rerouted to the OS work. GmsCompat stays enabled across reboots.
 - **Camera**: Motorola camera HAL and Moto Camera work, including portrait (blur) photos.
