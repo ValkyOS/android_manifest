@@ -4,7 +4,7 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V35, November 2026)
+## Status (V39, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -18,6 +18,8 @@ Built and installed on the device (`userdebug`, signed with the builder's own ke
 - **Per-user options**, ported from GrapheneOS: in Settings > System > Users, each user gets "App installs and updates" (enabled, first party sources only, or disabled), "Install available apps" and "Allow running in background".
 - **Internet connectivity checks**, ported from GrapheneOS: captive portal detection and the DNS-over-TLS/HTTPS probes use GrapheneOS servers by default instead of Google; Settings > Network & internet > Internet connectivity checks lets you pick GrapheneOS, standard (Google) or off. Vanadium follows the same setting.
 - **Play Integrity API notification and per-app blocking**, ported from GrapheneOS: when an app uses the Play Integrity API a notification is shown, and App info > Play Integrity API lets you block it for that app (it then gets the "API not available" error). The option appears once the app has used the API. Nothing is spoofed.
+- **ValkyOS branding**: ValkyOS name in About phone and Settings, logo on the Settings homepage and in recovery, and seven ValkyOS wallpapers in the wallpaper picker (replacing the LineageOS ones).
+- **No LineageOS statistics**: the anonymous statistics option is hidden (Trust and setup wizard) and the upload is disabled, so nothing is sent to stats.lineageos.org.
 - **USB protection**: LineageOS already provides it (Settings > Privacy > Trust > Restrict USB); it works on `eqe`.
 - **Per-app network access**: LineageOS already provides it (App info > Mobile data & Wi-Fi > Network access).
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.

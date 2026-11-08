@@ -21,11 +21,11 @@
     <remote name="grapheneos"
             fetch="https://github.com/GrapheneOS/" />
 
-    <!-- ValkyOS identity, version properties and boot animation. -->
+    <!-- ValkyOS identity, version properties, boot animation, wallpapers and recovery logo. -->
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="18f432b47447724c0713a32ddfc1334a09684352" />
+             revision="e157e8b258feebdd60b910b0ab3c962ba36bb807" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
@@ -54,7 +54,7 @@
              remote="valkyos"
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
-             revision="a471838ee3253011c6263351fba37afc08fdbeb7" />
+             revision="036daed8758223f35f139cf53ecac29709838861" />
 
     <!-- Contact Scopes (GrapheneOS): scoped contacts provider and permission screen (also Storage Scopes UI). -->
     <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />
