@@ -4,7 +4,7 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V34, November 2026)
+## Status (V35, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -17,6 +17,7 @@ Built and installed on the device (`userdebug`, signed with the builder's own ke
 - **Vanadium**, the GrapheneOS browser and WebView, replaces the LineageOS browser and WebView (always the latest release from branch `17`).
 - **Per-user options**, ported from GrapheneOS: in Settings > System > Users, each user gets "App installs and updates" (enabled, first party sources only, or disabled), "Install available apps" and "Allow running in background".
 - **Internet connectivity checks**, ported from GrapheneOS: captive portal detection and the DNS-over-TLS/HTTPS probes use GrapheneOS servers by default instead of Google; Settings > Network & internet > Internet connectivity checks lets you pick GrapheneOS, standard (Google) or off. Vanadium follows the same setting.
+- **Play Integrity API notification and per-app blocking**, ported from GrapheneOS: when an app uses the Play Integrity API a notification is shown, and App info > Play Integrity API lets you block it for that app (it then gets the "API not available" error). The option appears once the app has used the API. Nothing is spoofed.
 - **USB protection**: LineageOS already provides it (Settings > Privacy > Trust > Restrict USB); it works on `eqe`.
 - **Per-app network access**: LineageOS already provides it (App info > Mobile data & Wi-Fi > Network access).
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.
@@ -26,7 +27,7 @@ Known limitations:
 - The bootloader must stay unlocked (Motorola does not support a custom root of trust), so verified boot reports **orange**.
 - **Play Integrity is not promised**; apps that require it may refuse to run.
 - Sandboxed Google Play is protected like on GrapheneOS: Play services and Play Store are installed and updated through the GrapheneOS App Store (or `adb`), not by arbitrary installers.
-- Still missing from GmsCompat: Play Integrity handling in the GmsCompat app. Google Camera client overrides and Android Auto support are postponed.
+- Postponed in GmsCompat: Google Camera client overrides and Android Auto support.
 
 ## Build it yourself
 
