@@ -45,7 +45,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs,sysui-studio"
              upstream="valkyos-17"
-             revision="8bfabd171493ce24bf617e1c327e5986e4d9becc" />
+             revision="c73bd7f7e5aba915e9835dd37254fc6ed05cd211" />
 
     <!-- ValkyOS privacy features in Settings (automatic security reboot toggle). -->
     <remove-project name="LineageOS/android_packages_apps_Settings" />
@@ -54,7 +54,7 @@
              remote="valkyos"
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
-             revision="8c1dead15fbc842664a5a05d0032f6b36eca3b83" />
+             revision="1dca0755be6461ce91fee8beb653480289b7e034" />
 
     <!-- Contact Scopes (GrapheneOS): scoped contacts provider and permission screen (also Storage Scopes UI). -->
     <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />
@@ -137,6 +137,23 @@
              groups="pdk"
              upstream="valkyos-17"
              revision="0f1d55c51fc80810f88770eea78ee308ddafaca5" />
+
+    <!-- Internet connectivity checks setting (GrapheneOS servers by default). -->
+    <remove-project name="platform/packages/modules/NetworkStack" />
+    <project path="packages/modules/NetworkStack"
+             name="platform_packages_modules_NetworkStack"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs"
+             upstream="valkyos-17"
+             revision="60485a1b539343e4f1fd7cb555e04599107a9b1b" />
+
+    <remove-project name="platform/packages/modules/DnsResolver" />
+    <project path="packages/modules/DnsResolver"
+             name="platform_packages_modules_DnsResolver"
+             remote="valkyos"
+             groups="pdk-cw-fs,pdk-fs"
+             upstream="valkyos-17"
+             revision="d217795d09adaab5adf8e5297a1fdcfc0cbe4d1f" />
 
     <project path="packages/apps/GmsCompat"
              name="platform_packages_apps_GmsCompat"
