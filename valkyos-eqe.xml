@@ -54,7 +54,7 @@
              remote="valkyos"
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
-             revision="84ab79a07157ddc2aec0650c62466964067acba7" />
+             revision="8c1dead15fbc842664a5a05d0032f6b36eca3b83" />
 
     <!-- Contact Scopes (GrapheneOS): scoped contacts provider and permission screen (also Storage Scopes UI). -->
     <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />

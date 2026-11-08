@@ -4,7 +4,7 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V30, November 2026)
+## Status (V31, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -15,6 +15,7 @@ Built and installed on the device (`userdebug`, signed with the builder's own ke
 - **Storage Scopes**, ported from GrapheneOS: instead of granting storage or media permissions, you can choose which folders and files an app may access; the app still sees the files it creates. Option in the app's Photos and videos / Files permission screen.
 - **Sensors permission**, ported from GrapheneOS: a new per-app "Sensors" permission covers sensors that had no permission (accelerometer, gyroscope, compass, barometer...). New apps get it by default and it can be denied per app; apps installed before the update keep access.
 - **Vanadium**, the GrapheneOS browser and WebView, replaces the LineageOS browser and WebView (always the latest release from branch `17`).
+- **Per-user options**, ported from GrapheneOS: in Settings > System > Users, each user gets "App installs and updates" (enabled, first party sources only, or disabled), "Install available apps" and "Allow running in background".
 - **USB protection**: LineageOS already provides it (Settings > Privacy > Trust > Restrict USB); it works on `eqe`.
 - **Per-app network access**: LineageOS already provides it (App info > Mobile data & Wi-Fi > Network access).
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.
