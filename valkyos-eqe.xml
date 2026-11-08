@@ -88,7 +88,7 @@
              remote="valkyos"
              groups="pdk"
              upstream="valkyos-17"
-             revision="82127e3a3650ead193380d87fe344c665f59e5fd" />
+             revision="b925f81be11c73c1c74f61339100f52ec184e7d3" />
 
     <remove-project name="LineageOS/android_bionic" />
     <project path="bionic"
@@ -96,7 +96,7 @@
              remote="valkyos"
              groups="pdk"
              upstream="valkyos-17"
-             revision="199366392b1091ac30c0d47089c30cbdb17c7637" />
+             revision="c7b793d8fd62304a6e072fd16bd22a23bf70974e" />
 
     <remove-project name="platform/libcore" />
     <project path="libcore"
@@ -104,7 +104,7 @@
              remote="valkyos"
              groups="pdk,sysui-studio"
              upstream="valkyos-17"
-             revision="31dd5822d104b3d0c31cd093998eff27c08e11b5" />
+             revision="c708fbd27806ca5e89d35bc05b18d8bbd780a96d" />
 
     <remove-project name="LineageOS/android_packages_modules_Connectivity" />
     <project path="packages/modules/Connectivity"
@@ -112,7 +112,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs"
              upstream="valkyos-17"
-             revision="aead95271bd6ccc36a138639040ae4724eed9c74" />
+             revision="7e2513940bfeb1fddb267bfdc9a24632ef912983" />
 
     <remove-project name="platform/packages/modules/StatsD" />
     <project path="packages/modules/StatsD"
@@ -120,7 +120,7 @@
              remote="valkyos"
              groups="pdk-cw-fs,pdk-fs"
              upstream="valkyos-17"
-             revision="e7c3f1a680ee05e0d39ec1900a77705cdd1ea33d" />
+             revision="c4eb1ae75f746cd6cb8bf810411f099febd29117" />
 
     <remove-project name="platform/packages/modules/AppSearch" />
     <project path="packages/modules/AppSearch"
@@ -128,7 +128,7 @@
              remote="valkyos"
              groups="pdk"
              upstream="valkyos-17"
-             revision="cafffec79491b8fb395609a6613f5b4379aef726" />
+             revision="12c2724d9926b7d44a6aa32d30d6a4a8dfd05f01" />
 
     <remove-project name="platform/system/tools/aidl" />
     <project path="system/tools/aidl"
@@ -136,7 +136,7 @@
              remote="valkyos"
              groups="pdk"
              upstream="valkyos-17"
-             revision="0f1d55c51fc80810f88770eea78ee308ddafaca5" />
+             revision="56e6698e67174d28d892a9336e91251594eda16a" />
 
     <!-- Internet connectivity checks setting (GrapheneOS servers by default). -->
     <remove-project name="platform/packages/modules/NetworkStack" />
@@ -159,7 +159,7 @@
              name="platform_packages_apps_GmsCompat"
              remote="valkyos"
              upstream="valkyos-17"
-             revision="5e8e7f34c723a282d6814d374ad5ae19e8f74ced" />
+             revision="d9a66cec45f21632750018b19f9b1ce5b70d7635" />
 
     <project path="external/GmsCompatConfig"
              name="platform_external_GmsCompatConfig"
