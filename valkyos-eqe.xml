@@ -25,11 +25,19 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="e92fc98a0f24d14fb965deeca6ac340665341749" />
+             revision="ecece33d3d34a358443d5b5dc1381e1da32147b4" />
 
-    <!-- Exact platform base required by build/setup-valkyos.sh (libheif patch). -->
-    <extend-project name="LineageOS/android_frameworks_av"
-                    revision="1c5914737a1a89d0c5b3e52e8289019eab3f8cbf" />
+    <!--
+      frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
+      media/libheif, which Android 16 vendor blobs (eqe WFD) still link against.
+    -->
+    <remove-project name="LineageOS/android_frameworks_av" />
+    <project path="frameworks/av"
+             name="android_frameworks_av"
+             remote="valkyos"
+             groups="pdk,sysui-studio"
+             upstream="valkyos-17"
+             revision="e2f4322bce9afbc61ec8903fd50e954c3de6cfac" />
 
     <!--
       frameworks/native: LineageOS a96adf2c (2026-11-01 security patch) plus the
