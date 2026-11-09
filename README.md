@@ -52,12 +52,11 @@ mkdir -p ~/valkyos && cd ~/valkyos
 repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
 git clone https://github.com/ValkyOS/android_manifest.git .repo/local_manifests
 repo sync -c -j8
-bash vendor/valkyos/build/setup-valkyos.sh "$PWD"
 ```
 
 [`valkyos-eqe.xml`](valkyos-eqe.xml) is a **local manifest overlay**, so the `repo init` URL must be the upstream **LineageOS/android** repository, **not this repository**.
 
-`setup-valkyos.sh` reproduces the compatibility changes needed by this Android 17 base (framework ABI bridges, the camera fixes and the OpenEUICC dependencies). It verifies every input by SHA-256 and can be run again safely. See [`vendor/valkyos/build/README.md`](https://github.com/ValkyOS/android_vendor_valkyos/blob/main/build/README.md).
+No setup script is needed after syncing: every ValkyOS change lives in the repositories pinned by the manifest (see [`vendor/valkyos/build/README.md`](https://github.com/ValkyOS/android_vendor_valkyos/blob/main/build/README.md)).
 
 ### Signing keys
 

@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="bd4d7e9bf27d2dbd9411cff9061af19f40a5651c" />
+             revision="7dd7a4db9dc08309140cac800a5f78dc52a797c7" />
 
     <!--
       frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
@@ -214,7 +214,7 @@
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
              remote="dvy-jp"
-             revision="aa81388d6e4afdc5133ee8b03c1464678ead0806" />
+             revision="882de6fddd9a6c3c6feb7984c8cb17e1ac52fe46" />
 
     <!--
       Qualcomm sm8550 vendor sepolicy for eqe: LineageOS 3246964e plus the
@@ -254,7 +254,7 @@
     <project path="kernel/motorola/sm7550"
              name="android_kernel_motorola_sm7550_a17"
              remote="dvy-jp"
-             revision="8408f2fc8c1a6ee381d6156e4b6cfd7aaea34f0f" />
+             revision="f70f8546ac4aa0dcd047e17d276989e53dbc9841" />
 
     <project path="kernel/motorola/sm7550-modules"
              name="android_kernel_motorola_sm7550-modules_a17"
