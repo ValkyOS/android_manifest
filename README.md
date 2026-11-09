@@ -4,7 +4,7 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V39, November 2026)
+## Status (V42, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -19,7 +19,8 @@ Built and installed on the device (`userdebug`, signed with the builder's own ke
 - **Internet connectivity checks**, ported from GrapheneOS: captive portal detection and the DNS-over-TLS/HTTPS probes use GrapheneOS servers by default instead of Google; Settings > Network & internet > Internet connectivity checks lets you pick GrapheneOS, standard (Google) or off. Vanadium follows the same setting.
 - **Play Integrity API notification and per-app blocking**, ported from GrapheneOS: when an app uses the Play Integrity API a notification is shown, and App info > Play Integrity API lets you block it for that app (it then gets the "API not available" error). The option appears once the app has used the API. Nothing is spoofed.
 - **ValkyOS branding**: ValkyOS name in About phone and Settings, logo on the Settings homepage and in recovery, and seven ValkyOS wallpapers in the wallpaper picker (replacing the LineageOS ones).
-- **No LineageOS statistics**: the anonymous statistics option is hidden (Trust and setup wizard) and the upload is disabled, so nothing is sent to stats.lineageos.org.
+- **No LineageOS statistics**: the anonymous statistics option is hidden (Trust, setup wizard and Settings search) and the upload is disabled, so nothing is sent to stats.lineageos.org.
+- **System updates without LineageOS**: the Updater has no update server for now (the check shows an error) and shows ValkyOS names, logo and version.
 - **USB protection**: LineageOS already provides it (Settings > Privacy > Trust > Restrict USB); it works on `eqe`.
 - **Per-app network access**: LineageOS already provides it (App info > Mobile data & Wi-Fi > Network access).
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.
@@ -30,6 +31,17 @@ Known limitations:
 - **Play Integrity is not promised**; apps that require it may refuse to run.
 - Sandboxed Google Play is protected like on GrapheneOS: Play services and Play Store are installed and updated through the GrapheneOS App Store (or `adb`), not by arbitrary installers.
 - Postponed in GmsCompat: Google Camera client overrides and Android Auto support.
+
+## Privacy
+
+ValkyOS itself collects no data and runs no servers of its own.
+
+- The LineageOS anonymous statistics are disabled and hidden; nothing is sent to stats.lineageos.org.
+- System updates have no update server yet, so the Updater makes no requests.
+- Internet connectivity checks use GrapheneOS servers by default (Settings > Network & internet lets you choose GrapheneOS, standard Google servers, or off).
+- The GrapheneOS App Store and Vanadium check GrapheneOS servers for updates.
+- Network time still uses the standard Android server (time.android.com).
+- Google Play is optional and sandboxed; if you install it, Google's own policies apply to it.
 
 ## Build it yourself
 

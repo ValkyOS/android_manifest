@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="e157e8b258feebdd60b910b0ab3c962ba36bb807" />
+             revision="0b0d44a98233282a390529f852880c4d6e46d456" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
