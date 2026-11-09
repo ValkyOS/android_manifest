@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="efa859c0ca076068e4d3605fa9170f648603dd16" />
+             revision="bd4d7e9bf27d2dbd9411cff9061af19f40a5651c" />
 
     <!--
       frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
@@ -214,7 +214,20 @@
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
              remote="dvy-jp"
-             revision="500debf6ed1b8032f6e787c843e29f6be0f6064b" />
+             revision="aa81388d6e4afdc5133ee8b03c1464678ead0806" />
+
+    <!--
+      Qualcomm sm8550 vendor sepolicy for eqe: LineageOS 3246964e plus the
+      Moto Camera xDSP exception (portrait). Only the sm8550 path is replaced;
+      the other sepolicy_vndr paths keep coming from LineageOS.
+    -->
+    <remove-project name="LineageOS/android_device_qcom_sepolicy_vndr"
+                    path="device/qcom/sepolicy_vndr/sm8550" />
+    <project path="device/qcom/sepolicy_vndr/sm8550"
+             name="android_device_qcom_sepolicy_vndr"
+             remote="dvy-jp"
+             groups="qcom,kailua-vendor"
+             revision="cb6013c8aa1038e5233c38020c7385a0af317702" />
 
     <project path="device/qcom/wfd"
              name="android_device_qcom_wfd"
