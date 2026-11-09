@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="0b0d44a98233282a390529f852880c4d6e46d456" />
+             revision="f08d16b56f8998ebd663832bb631793afa266f98" />
 
     <!-- Exact platform bases required by build/setup-valkyos.sh. -->
     <extend-project name="LineageOS/android_frameworks_av"
@@ -179,11 +179,14 @@
       Vanadium (GrapheneOS browser and WebView), presigned prebuilts. Replaces
       the LineageOS browser and WebView. Follows branch 17 so a clean sync
       always gets the latest release; the App Store also updates it.
+      Synced to vendor/vanadium (not external/) because the optional
+      android.ext.adservices library is only visible to //vendor in LineageOS;
+      this way its Android.bp is used unchanged.
     -->
     <remote name="grapheneos-gitlab"
             fetch="https://gitlab.com/grapheneos/" />
 
-    <project path="external/vanadium"
+    <project path="vendor/vanadium"
              name="platform_external_vanadium"
              remote="grapheneos-gitlab"
              revision="refs/heads/17"
