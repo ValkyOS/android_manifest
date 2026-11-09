@@ -4,7 +4,7 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
 
-## Status (V43, November 2026)
+## Status (V46, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -21,6 +21,7 @@ Built and installed on the device (`userdebug`, signed with the builder's own ke
 - **ValkyOS branding**: ValkyOS name in About phone and Settings, logo on the Settings homepage and in recovery, and seven ValkyOS wallpapers in the wallpaper picker (replacing the LineageOS ones).
 - **No LineageOS statistics**: the anonymous statistics option is hidden (Trust, setup wizard and Settings search) and the upload is disabled, so nothing is sent to stats.lineageos.org.
 - **System updates without LineageOS**: the Updater has no update server for now (the check shows an error) and shows ValkyOS names, logo and version.
+- **Build output**: the update package is named `ValkyOS-<version>.zip` (the LineageOS name is still produced as a hard link of the same file).
 - **USB protection**: LineageOS already provides it (Settings > Privacy > Trust > Restrict USB); it works on `eqe`.
 - **Per-app network access**: LineageOS already provides it (App info > Mobile data & Wi-Fi > Network access).
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.

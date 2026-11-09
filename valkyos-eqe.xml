@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="f47a6e63956982ec12b4a40bf35bf4d07425c5aa" />
+             revision="49349ada84b1538414818b9df643b248d0ec3bb2" />
 
     <!--
       frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
