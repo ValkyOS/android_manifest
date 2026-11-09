@@ -21,11 +21,11 @@
     <remote name="grapheneos"
             fetch="https://github.com/GrapheneOS/" />
 
-    <!-- ValkyOS identity, version properties, boot animation, wallpapers and recovery logo. -->
+    <!-- ValkyOS identity, version properties, boot animation, wallpapers and recovery logo (any screen). -->
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="7dd7a4db9dc08309140cac800a5f78dc52a797c7" />
+             revision="15bfe16ada145885b0a0d7575067ba9005de96bd" />
 
     <!--
       frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
@@ -214,7 +214,7 @@
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
              remote="dvy-jp"
-             revision="882de6fddd9a6c3c6feb7984c8cb17e1ac52fe46" />
+             revision="996c18fb786ac2b0e42f3332d05a93f8cc2c6c16" />
 
     <!--
       Qualcomm sm8550 vendor sepolicy for eqe: LineageOS 3246964e plus the
