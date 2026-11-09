@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="15bfe16ada145885b0a0d7575067ba9005de96bd" />
+             revision="f47a6e63956982ec12b4a40bf35bf4d07425c5aa" />
 
     <!--
       frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
@@ -73,6 +73,14 @@
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
              revision="036daed8758223f35f139cf53ecac29709838861" />
+
+    <!-- Updater: shows the ValkyOS version (ro.valkyos.version) in its header. -->
+    <remove-project name="LineageOS/android_packages_apps_Updater" />
+    <project path="packages/apps/Updater"
+             name="android_packages_apps_Updater"
+             remote="valkyos"
+             upstream="valkyos-17"
+             revision="2253965450acd8009a67c31603d13e75e624199f" />
 
     <!-- Contact Scopes (GrapheneOS): scoped contacts provider and permission screen (also Storage Scopes UI). -->
     <remove-project name="LineageOS/android_packages_providers_ContactsProvider" />
