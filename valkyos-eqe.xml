@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="ecece33d3d34a358443d5b5dc1381e1da32147b4" />
+             revision="efa859c0ca076068e4d3605fa9170f648603dd16" />
 
     <!--
       frameworks/av: LineageOS 1c591473 (2026-11-01 security patch) plus
@@ -214,7 +214,7 @@
     <project path="device/motorola/eqe"
              name="android_device_motorola_eqe"
              remote="dvy-jp"
-             revision="77eb7858eaefb87c47b6c418d53231f5202ac70c" />
+             revision="500debf6ed1b8032f6e787c843e29f6be0f6064b" />
 
     <project path="device/qcom/wfd"
              name="android_device_qcom_wfd"
@@ -230,7 +230,7 @@
     <project path="vendor/motorola/eqe"
              name="proprietary_vendor_motorola_eqe_a17"
              remote="dvy-jp"
-             revision="7dad877bfb673cdb0ab14beeeff4d9ec366384ba" />
+             revision="3329889f0ab6cb24e5ec7657313e398278a52442" />
 
     <project path="vendor/qcom/wfd"
              name="proprietary_vendor_qcom_wfd_a17"
