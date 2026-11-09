@@ -25,14 +25,24 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="f08d16b56f8998ebd663832bb631793afa266f98" />
+             revision="e92fc98a0f24d14fb965deeca6ac340665341749" />
 
-    <!-- Exact platform bases required by build/setup-valkyos.sh. -->
+    <!-- Exact platform base required by build/setup-valkyos.sh (libheif patch). -->
     <extend-project name="LineageOS/android_frameworks_av"
                     revision="1c5914737a1a89d0c5b3e52e8289019eab3f8cbf" />
 
-    <extend-project name="LineageOS/android_frameworks_native"
-                    revision="a96adf2c6e62dbb22299cd83bbb9ea4bc569e985" />
+    <!--
+      frameworks/native: LineageOS a96adf2c (2026-11-01 security patch) plus the
+      Sensors permission (GrapheneOS) and the Android 16 display ABI bridge, so no
+      setup script has to patch it.
+    -->
+    <remove-project name="LineageOS/android_frameworks_native" />
+    <project path="frameworks/native"
+             name="android_frameworks_native"
+             remote="valkyos"
+             groups="pdk,sysui-studio"
+             upstream="valkyos-17"
+             revision="fecb116c864c45c523c740f751518b1b3e1af93d" />
 
     <!--
       Sandboxed Google Play (GmsCompat), ported from GrapheneOS.
