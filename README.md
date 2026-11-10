@@ -2,9 +2,9 @@
 
 ValkyOS is an experimental privacy- and security-focused Android ROM based on **LineageOS 24.0 (Android 17)**, adding features ported from **GrapheneOS**. The first target is the **Motorola Edge 50 Pro (`eqe`)**.
 
-This repository stores **only the local manifest** that points to the ValkyOS forks and the exact device sources used, plus build and recovery instructions. Upstream LineageOS code stays in its original repositories.
+This repository is the **eqe's personal manifest**: it pins the exact ValkyOS forks and device sources used for the Motorola Edge 50 Pro. The general ValkyOS manifest is [`ValkyOS/android`](https://github.com/ValkyOS/android) (branch `17`); device sources are added with a local manifest such as [`dvy-jp/local_manifests`](https://github.com/dvy-jp/local_manifests).
 
-## Status (V46, November 2026)
+## Status (V48, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -50,12 +50,13 @@ Install the Android `repo` utility, Git and **Git LFS** according to the Lineage
 
 ```bash
 mkdir -p ~/valkyos && cd ~/valkyos
-repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
-git clone https://github.com/ValkyOS/android_manifest.git .repo/local_manifests
+repo init -u https://github.com/ValkyOS/android -b 17 --git-lfs
+git clone https://github.com/dvy-jp/local_manifests -b valkyos-17 .repo/local_manifests
 repo sync -c -j8
 ```
 
-[`valkyos-eqe.xml`](valkyos-eqe.xml) is a **local manifest overlay**, so the `repo init` URL must be the upstream **LineageOS/android** repository, **not this repository**.
+That is the general ValkyOS flow. This repository (`android_manifest`) stays as the eqe's
+personal manifest, pinned to the exact revisions used for the Edge 50 Pro.
 
 No setup script is needed after syncing: every ValkyOS change lives in the repositories pinned by the manifest (see [`vendor/valkyos/build/README.md`](https://github.com/ValkyOS/android_vendor_valkyos/blob/main/build/README.md)).
 
