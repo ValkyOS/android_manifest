@@ -25,7 +25,7 @@
     <project path="vendor/valkyos"
              name="android_vendor_valkyos"
              remote="valkyos"
-             revision="d9ffc5ce92d458bc197816c3c6f3f1124fbf4d14" />
+             revision="79baf41e6abab80ed7f77b63800c29549e9bad83" />
 
     <!-- vendor/lineage: the update package drops the lineage- prefix (ValkyOS-<version>.zip). -->
     <remove-project name="LineageOS/android_vendor_lineage" />
