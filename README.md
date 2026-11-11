@@ -4,7 +4,7 @@ ValkyOS is an experimental privacy- and security-focused Android ROM based on **
 
 This repository is the **eqe's personal manifest**: it pins the exact ValkyOS forks and device sources used for the Motorola Edge 50 Pro. The general ValkyOS manifest is [`ValkyOS/android`](https://github.com/ValkyOS/android) (branch `17`); device sources are added with a local manifest such as [`dvy-jp/local_manifests`](https://github.com/dvy-jp/local_manifests).
 
-## Status (V48, November 2026)
+## Status (V50, November 2026)
 
 Built and installed on the device (`userdebug`, signed with the builder's own keys), with the LineageOS **2026-11-01** security patch:
 
@@ -18,10 +18,10 @@ Built and installed on the device (`userdebug`, signed with the builder's own ke
 - **Per-user options**, ported from GrapheneOS: in Settings > System > Users, each user gets "App installs and updates" (enabled, first party sources only, or disabled), "Install available apps" and "Allow running in background".
 - **Internet connectivity checks**, ported from GrapheneOS: captive portal detection and the DNS-over-TLS/HTTPS probes use GrapheneOS servers by default instead of Google; Settings > Network & internet > Internet connectivity checks lets you pick GrapheneOS, standard (Google) or off. Vanadium follows the same setting.
 - **Play Integrity API notification and per-app blocking**, ported from GrapheneOS: when an app uses the Play Integrity API a notification is shown, and App info > Play Integrity API lets you block it for that app (it then gets the "API not available" error). The option appears once the app has used the API. Nothing is spoofed.
-- **ValkyOS branding**: ValkyOS name in About phone and Settings, logo on the Settings homepage and in recovery, and seven ValkyOS wallpapers in the wallpaper picker (replacing the LineageOS ones).
+- **ValkyOS branding**: ValkyOS name in About phone and Settings, logo on the Settings homepage and in recovery, and seven ValkyOS wallpapers in the wallpaper picker (replacing the LineageOS ones).`n- **No LineageOS leftovers in About phone**: the LineageOS legal entry and the contributors screen are removed.
 - **No LineageOS statistics**: the anonymous statistics option is hidden (Trust, setup wizard and Settings search) and the upload is disabled, so nothing is sent to stats.lineageos.org.
 - **System updates without LineageOS**: the Updater has no update server for now (the check shows an error) and shows ValkyOS names, logo and version.
-- **Build output**: the update package is named `ValkyOS-<version>.zip` (the LineageOS name is still produced as a hard link of the same file).
+- **Build output**: the update package is named `ValkyOS-<version>.zip` (no `lineage-` prefix and no build type).
 - **USB protection**: LineageOS already provides it (Settings > Privacy > Trust > Restrict USB); it works on `eqe`.
 - **Per-app network access**: LineageOS already provides it (App info > Mobile data & Wi-Fi > Network access).
 - **GrapheneOS App Store** is included (always the latest release from branch `17`) to install sandboxed Google Play and GrapheneOS apps.
