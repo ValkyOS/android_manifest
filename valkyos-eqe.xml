@@ -72,7 +72,15 @@
              remote="valkyos"
              groups="pdk-fs,pdk-cw-tvc,sysui-studio"
              upstream="valkyos-17"
-             revision="036daed8758223f35f139cf53ecac29709838861" />
+             revision="c8d0a929eabd6e4838db1eec887a24cd3b4618e6" />
+
+    <!-- LineageParts: no LineageOS contributors screen in About phone > Legal. -->
+    <remove-project name="LineageOS/android_packages_apps_LineageParts" />
+    <project path="packages/apps/LineageParts"
+             name="android_packages_apps_LineageParts"
+             remote="valkyos"
+             upstream="valkyos-17"
+             revision="c5266f2d617d72cc58907f2f91a51f106a223460" />
 
     <!-- Updater: shows the ValkyOS version (ro.valkyos.version) in its header. -->
     <remove-project name="LineageOS/android_packages_apps_Updater" />
